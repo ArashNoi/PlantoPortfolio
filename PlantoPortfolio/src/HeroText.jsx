@@ -12,7 +12,7 @@ export default function HeroText() {
       </p>
 
       <div className="hero-actions">
-        <Button className="explore-button">
+        <Button className="pill-button">
           Explore
         </Button>
 

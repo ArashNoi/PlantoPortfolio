@@ -160,10 +160,10 @@ main {
 }
 
 /* ========================================
-   7. Explore button
+   7. Primary pill button
 ======================================== */
 
-.explore-button {
+.pill-button {
   min-width: clamp(100px, 10.5vw, 108px);
   min-height: 36px;
   padding: 8px 24px;
@@ -181,12 +181,12 @@ main {
     color 180ms ease;
 }
 
-.explore-button:hover {
+.pill-button:hover {
   background-color: var(--color-white-75);
   color: var(--color-background);
 }
 
-.explore-button:active {
+.pill-button:active {
   background-color: var(--color-white-50);
 }
 
@@ -205,7 +205,7 @@ main {
   background: transparent;
 
   color: var(--color-white-75);
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 
@@ -244,10 +244,16 @@ main {
   );
 
   transform: translateX(1px);
+
+  transition: background-color 180ms ease;
+}
+
+.live-demo-button:hover .play-triangle {
+  background-color: var(--color-background);
 }
 
 .live-demo-button:hover .play-circle {
-  background-color: rgb(255 255 255 / 15%);
+  background-color: var(--color-white-75);
 }
 
 /* ========================================

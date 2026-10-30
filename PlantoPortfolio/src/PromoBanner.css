@@ -1,0 +1,131 @@
+.promo-banner {
+  position: relative;
+  isolation: isolate;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+
+  width: calc(50vw + 100px);
+  min-height: 260px;
+  border-radius: 80px;
+
+  padding: 20px;
+  margin-top: 40px;
+  margin-inline: auto;
+
+  overflow: visible;
+}
+
+.promo-banner--image-left {
+  grid-template-areas: "image content";
+}
+
+.promo-banner--image-right {
+  grid-template-areas: "content image";
+}
+
+.promo-image-area {
+  position: relative;
+  grid-area: image;
+
+  height: 100%;
+  overflow: visible;
+}
+
+.promo-image {
+  position: absolute;
+  top: -140px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  max-width: 380px;
+  height: calc(100% + 150px);
+
+  object-fit: contain;
+  object-position: center bottom;
+
+  pointer-events: none;
+}
+
+.promo-content {
+  grid-area: content;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 32px;
+}
+
+.promo-title {
+  margin: 0;
+  color: rgb(255 255 255 / 90%);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 600;
+}
+
+.promo-description {
+  margin: 0;
+  max-width: 320px;
+  color: rgb(255 255 255 / 65%);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.promo-price {
+  margin: 4px 0 0;
+  color: rgb(255 255 255 / 90%);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.promo-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.icon-button {
+  display: grid;
+  place-items: center;
+
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+
+  border: 1px solid var(--color-white-75);
+  border-radius: 9px;
+  background: transparent;
+  color: var(--color-white-75);
+
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.icon-button:hover {
+  background-color: var(--color-white-75);
+  color: var(--color-background);
+}
+
+@media (max-width: 700px) {
+  .promo-banner {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "content";
+  }
+
+  .promo-image-area {
+    height: 220px;
+  }
+
+  .promo-content {
+    padding: 24px;
+  }
+}

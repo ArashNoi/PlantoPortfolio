@@ -5,7 +5,7 @@
   width: 100%;
   overflow: visible;
   
-  border-radius: clamp(12px, 2vw, 28px);
+  border-radius: 35px;
   background: rgb(255 255 255 / 5%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px); /* backdrop filter for Safari & other webkit based browsers */

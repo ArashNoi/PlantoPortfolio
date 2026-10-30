@@ -86,7 +86,7 @@ export default function PlantShowcase() {
           </button>
         </div>
 
-        <Button className="buy-button" onClick={buyPlant}>
+        <Button className="pill-button" onClick={buyPlant}>
           Buy Now
         </Button>
 
